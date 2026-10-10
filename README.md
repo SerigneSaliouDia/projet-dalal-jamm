@@ -88,6 +88,8 @@ extensions recommandées (fenêtre en bas à droite).
 
 ## Méthode de travail
 
+> **Nouveau dans l'équipe ?** Commence par `docs/onboarding.md` (installation, première PR, cycle de la semaine).
+
 - **Un sprint = une semaine**, 2 à 4 tâches par personne (voir `TICKETS.md`).
 - Chaque personne travaille sur une branche `sprint-NN/prenom` et ouvre **une PR par sprint**.
 - Une PR est relue par un autre membre, puis **fusionnée dans `main` par Saliou**.
