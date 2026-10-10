@@ -1,0 +1,12 @@
+#!/bin/sh
+# Garde-fou local : refuse tout push direct vers main (on passe par une Pull Request).
+# Filet de sécurité contre les accidents, PAS une vraie protection (contournable).
+# Exception volontaire : ALLOW_MAIN_PUSH=1 git push
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [ "$remote_ref" = "refs/heads/main" ] && [ "$ALLOW_MAIN_PUSH" != "1" ]; then
+    echo "Push direct vers main REFUSE."
+    echo "Cree une branche (git checkout -b sprint-NN/prenom), pousse-la, puis ouvre une Pull Request."
+    exit 1
+  fi
+done
+exit 0

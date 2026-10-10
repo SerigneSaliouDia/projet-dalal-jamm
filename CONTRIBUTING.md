@@ -3,6 +3,19 @@
 ## Branches
 
 - `main` : toujours propre et fonctionnelle. **Personne ne pousse directement dessus.**
+
+> **Protection de `main` sur GitHub Free + dépôt privé :** les règles de protection de branche ne sont pas
+> disponibles dans cette configuration (elles exigent GitHub Pro/Team, ou un dépôt public). En attendant,
+> la règle « personne ne pousse sur `main` » repose sur **notre discipline** et sur un garde-fou local.
+> **Chacun l'active une fois sur sa machine, dans le dossier du projet :**
+>
+> ```
+> git config core.hooksPath .githooks
+> ```
+>
+> Ensuite, `git push` vers `main` est refusé avec un message explicatif. C'est un filet de sécurité contre
+> les accidents, pas une vraie protection : on peut le contourner (`--no-verify`), donc ne le faites pas.
+> Seul Saliou modifie `main`, en fusionnant des Pull Requests sur GitHub.
 - Une branche **par personne et par sprint** : `sprint-NN/prenom` (ex. `sprint-03/babel`).
 - Besoin d'isoler une tâche : `sprint-NN/prenom-sujet-court` (ex. `sprint-05/saliou-birads-cotes`).
 

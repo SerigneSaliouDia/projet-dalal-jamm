@@ -35,6 +35,11 @@ Si `git status` montre un fichier de données : **ne commitez pas**, retirez-le 
 GitHub → **Settings → Collaborators → Add people** : Manou et Babel, rôle **Write**.
 
 ### A5. Protéger `main`
+> **Dépôt privé sur GitHub Free :** les rulesets et la protection de branche ne sont **pas** disponibles
+> (ils exigent GitHub Pro/Team, ou un dépôt public). Deux solutions : demander **GitHub Pro gratuit pour étudiants**
+> (<https://education.github.com/pack>), puis appliquer les réglages ci-dessous ; en attendant, utiliser le
+> garde-fou local décrit dans `CONTRIBUTING.md` (`git config core.hooksPath .githooks`).
+
 GitHub → **Settings → Rules → Rulesets → New branch ruleset** :
 - Nom : `protect-main`, Enforcement : *Active*, cible : branche par défaut (`main`).
 - Cocher : **Restrict deletions**, **Require a pull request before merging** (1 approbation),
