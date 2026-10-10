@@ -7,6 +7,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from dalal_jamm.dicom.metadata import COLUMNS as HEADER_COLUMNS
+from dalal_jamm.dicom.metadata import read_header
 from dalal_jamm.utils.fs import extended_path
 
 COLUMNS = ["rel_path", "patient_idx", "exam_folder", "series_folder",
@@ -78,9 +80,21 @@ def scan_files(root: Path) -> pd.DataFrame:
     return df
 
 
-def build_inventory(root: Path) -> pd.DataFrame:
-    """Pour chaque fichier : lisible oui/non, motif d'échec, métadonnées d'en-tête.
+def build_inventory(root: Path, files: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Table des fichiers + contenu de leur en-tête DICOM (1 ligne par fichier).
 
-    Ticket : S1-MA-1 (lecture des en-têtes) puis assemblage ici.
+    `files` : résultat de `scan_files(root)` s'il existe déjà (évite de reparcourir le disque).
+    Les colonnes `ident_*` contiennent des IDENTIFIANTS : la table ne doit jamais quitter `data/`.
+
+    Ticket : S1-MA-1
     """
-    raise NotImplementedError("S1-MA-1")
+    root = Path(root)
+    if files is None:
+        files = scan_files(root)
+    headers = pd.DataFrame(
+        [read_header(root.joinpath(*rel.split("/"))) for rel in files["rel_path"]],
+        columns=HEADER_COLUMNS,
+    )
+    out = pd.concat([files.reset_index(drop=True), headers], axis=1)
+    out.attrs.update(files.attrs)
+    return out
