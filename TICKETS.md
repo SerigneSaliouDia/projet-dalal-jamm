@@ -104,21 +104,21 @@ Durée prévue : **17 semaines** (jusqu'au 05/02/2027), soit environ 4 mois. Les
 
 ### Saliou — branche `sprint-01/saliou` (~8 h)
 
-- [ ] **S1-SA-1** — `dicom/inventory.py` : parcours récursif (.IMA, .dcm, sans extension), 1 ligne par fichier · ~3 h
-- [ ] **S1-SA-2** — Exécuter `notebooks/01_inventaire_dicom.ipynb` sur toutes les données et résumer · ~3 h
-- [ ] **S1-SA-3** — Tableau de synthèse (trouvés / lus / échecs / examens) dans `docs/dicom_notes.md` · ~2 h
+- [x] **S1-SA-1** — `dicom/inventory.py` : parcours récursif (.IMA, .dcm, sans extension), 1 ligne par fichier · ~3 h
+- [x] **S1-SA-2** — Exécuter `notebooks/01_inventaire_dicom.ipynb` sur toutes les données et résumer · ~3 h
+- [x] **S1-SA-3** — Tableau de synthèse (trouvés / lus / échecs / examens) dans `docs/dicom_notes.md` · ~2 h
 
 ### Manou — branche `sprint-01/manou` (~10 h)
 
-- [ ] **S1-MA-1** — `dicom/metadata.py` : lecture des en-têtes sans pixels (UID, date, latéralité, vue, série, dimensions, syntaxe de transfert) · ~4 h
-- [ ] **S1-MA-2** — Tests unitaires avec un DICOM synthétique créé par pydicom · ~3 h
-- [ ] **S1-MA-3** — `dicom/views.py` : identification CC/MLO et D/G, cas non identifiables listés (ne jamais deviner) · ~3 h
+- [x] **S1-MA-1** — `dicom/metadata.py` : lecture des en-têtes sans pixels (UID, date, latéralité, vue, série, dimensions, syntaxe de transfert) · ~4 h
+- [x] **S1-MA-2** — Tests unitaires avec un DICOM synthétique créé par pydicom · ~3 h
+- [x] **S1-MA-3** — `dicom/views.py` : identification CC/MLO et D/G, cas non identifiables listés (ne jamais deviner) · ~3 h
 
 ### Babel — branche `sprint-01/babel` (~9 h)
 
-- [ ] **S1-BA-1** — Classer les échecs de lecture (écart 1965 vs 970) : cause et solution · ~4 h
-- [ ] **S1-BA-2** — Documenter les cas particuliers dans `docs/dicom_notes.md` · ~2 h
-- [ ] **S1-BA-3** — `dicom/exams.py` : regroupement par examen et détection des examens complets/incomplets · ~3 h
+- [x] **S1-BA-1** — Classer les échecs de lecture (écart 1965 vs 970) : cause et solution · ~4 h
+- [x] **S1-BA-2** — Documenter les cas particuliers dans `docs/dicom_notes.md` · ~2 h
+- [x] **S1-BA-3** — `dicom/exams.py` : regroupement par examen et détection des examens complets/incomplets · ~3 h
 
 ---
 
