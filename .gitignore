@@ -1,0 +1,42 @@
+# ===== DONNÉES PATIENTES : JAMAIS DANS GIT =====
+data/*
+!data/README.md
+*.dcm
+*.DCM
+*.ima
+*.IMA
+*.docx
+*.doc
+*.dicomdir
+DICOMDIR
+
+# Tables pouvant contenir des identités
+*mapping*.csv
+*private*
+
+# Environnement
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# Résultats lourds / modèles
+*.pt
+*.pth
+*.ckpt
+*.h5
+outputs/
+runs/
+mlruns/
+wandb/
+
+# Système
+.DS_Store
+Thumbs.db

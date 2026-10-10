@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "charliermarsh.ruff",
+    "github.vscode-pull-request-github",
+    "github.vscode-github-actions",
+    "eamodio.gitlens",
+    "yzhang.markdown-all-in-one"
+  ]
+}

@@ -1,0 +1,8 @@
+# À installer à partir du Sprint 11 (lourd). Choisir la version PyTorch adaptée à votre machine :
+# https://pytorch.org/get-started/locally/
+-r requirements.txt
+torch
+torchvision
+timm
+opencv-python-headless
+scikit-image
