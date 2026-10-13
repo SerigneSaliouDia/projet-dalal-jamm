@@ -28,6 +28,11 @@ CASES = [
      "sans distorsion architecturale", ["calcification"], 1),
     ("presence d'une masse spiculee associee a des microcalcifications, "
      "sans distorsion architecturale", ["distorsion"], 0),
+    # négation QUALIFIÉE : « absence de masse suspecte » n'exclut pas toute masse (rapports réels, S2)
+    ("absence de masse suspecte", ["masse"], None),
+    ("absence de masse evidente", ["masse"], None),
+    # « absence de calcifications vasculaires » n'exclut pas les autres calcifications
+    ("absence de calcifications vasculaires", ["calcification"], None),
     # non mentionné
     ("aspect normal du revetement cutane et du mamelon", ["masse"], None),
 ]

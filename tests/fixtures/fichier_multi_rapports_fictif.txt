@@ -1,0 +1,113 @@
+MAMMOGRAPHIE BILATERALE
+Prénom & Nom 	: Aminata EXEMPLE			        		DATE : 01.01.26
+Age 			: 40 ans
+Indication clinique	: Mastodynie droite (sein classé ACR 3 sur l’examen précédent).
+
+MATERIEL : SENOGRAPHIE DETECTEUR PLAN.
+TECHNIQUE : INCIDENCES COMPARATIVES DE FACE ET OBLIQUE.
+
+RESULTATS :
+
+Densité : seins de type B selon BIRADS.
+ 
+Sein droit : 
+Présence d’une opacité ovalaire au niveau du quadrant supéro-externe droit.
+Absence d’asymétrie de densité.
+Pas de distorsion architecturale.
+Absence de calcifications vasculaires.
+Aspect normal du revêtement cutané et du mamelon.
+
+Sein gauche : 
+Absence de masse évidente.
+Absence d’asymétrie de densité.
+Pas de distorsion architecturale.
+Absence de calcifications vasculaires.
+Aspect normal du revêtement cutané et du mamelon.
+
+Aires ganglionnaires : libres.
+
+Complément échographique : mise en évidence d’une formation kystique du quadrant inféro-externe droit de 6 x 4.5 mm.
+
+CONCLUSION :
+Examen mammographique class ACR 1 gauche et ACR 3 droit (probable adéno fibrome).
+
+
+Dr. Prénom NOM
+Radiologue
+
+MAMMOGRAPHIE BILATERALE
+Prénom & Nom 	: Fatou MODELE				        		DATE : 01.01.26
+Age 			: 47 ans
+Indication clinique	: Dépistage du sein.
+
+RESULTATS :
+
+Densité : seins de type A selon BIRADS.
+ 
+Sein droit : 
+Absence de masse suspecte.
+Absence d’asymétrie de densité.
+Pas de distorsion architecturale.
+Aspect normal du revêtement cutané et du mamelon.
+
+Sein gauche : 
+Macrocalcification séquellaire mammaire gauche.
+Absence d’asymétrie de densité.
+Pas de distorsion architecturale.
+Aspect normal du revêtement cutané et du mamelon.
+
+Aires ganglionnaires : libres.
+
+CONCLUSION :
+Examen mammographique classé ACR 2 à droit et ACR 1 à gauche.
+
+
+Dr. Prénom NOM
+Radiologue
+
+MAMMOGRAPHIE BILATERALE
+Prénom & Nom 	: Mariama TEST			        		DATE : 01.01.26
+Age 			: 44 ans
+Indication clinique	: Dépistage.
+
+RESULTATS :
+
+Densité : seins de type B selon BIRADS.
+ 
+Sein droit : 
+Absence de masse suspecte.
+Pas de distorsion architecturale.
+
+Sein gauche : 
+Absence de masse évidente.
+Pas de distorsion architecturale.
+
+Aires ganglionnaires : libres.
+
+CONCLUSION :
+Examen mammographique classé ACR 1 bilatéral.
+
+
+Dr. Prénom NOM
+Radiologue
+
+
+
+
+Prénom & Nom 	: Khady FICTIVE			 DATE : 01.01.26
+Age 			: 26 ans
+Indication clinique	: Bilan d’infertilité. 
+
+RESULTATS :
+
+HYSTEROGRAPHIE :
+Utérus latéro-dévié à droite, opacifié de façon homogène par le produit de contraste.
+
+Conclusion :
+Obstruction proximale tubaire gauche. 
+
+
+Dr. Prénom NOM
+Radiologue
+
+(FICHIER FICTIF écrit pour les tests : imite la structure observée dans les vrais rapports, aucune donnée réelle.)
