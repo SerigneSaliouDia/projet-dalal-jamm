@@ -12,6 +12,7 @@ import pandas as pd
 
 from dalal_jamm.config import get_paths
 from dalal_jamm.reports.reader import read_docx_ordered, read_extras
+from dalal_jamm.reports.redact import mask_patient_names
 
 
 def main() -> None:
@@ -24,19 +25,27 @@ def main() -> None:
     if row.empty:
         raise SystemExit(f"Numéro {n} absent de l'échantillon (1 à {len(sample)}).")
     name, reasons = row.iloc[0]["file"], row.iloc[0]["raisons"]
-    out = p.interim / f"check_{n}.txt"
-    header = f"FICHIER : {name}\nCHOISI POUR : {reasons}\n{'=' * 60}\n"
     path = p.reports / name
     body = read_docx_ordered(path)
     extras = read_extras(path)
-    parts = [header + body + "\n"]
+    parts = [body + "\n"]
     for key, title in (("headers", "EN-TÊTE"), ("footers", "PIED DE PAGE"), ("textboxes", "ZONE DE TEXTE")):
         for text in extras[key]:
-            parts.append(f"\n{'-' * 20} {title} (non inclus dans le texte principal) {'-' * 20}\n{text}\n")
-    out.write_text("".join(parts), encoding="utf-8")
-    print(f"Texte extrait écrit dans : {out}")
+            line = "-" * 20
+            parts.append(f"\n{line} {title} (non inclus dans le texte principal) {line}\n{text}\n")
+    content = "".join(parts)
+    meta = f"CHOISI POUR : {reasons}\n{'=' * 60}\n"
+
+    full = p.interim / f"check_{n}.txt"
+    full.write_text(f"FICHIER : {name}\n{meta}{content}", encoding="utf-8")
+    shareable = p.interim / f"check_{n}_partageable.txt"
+    shareable.write_text(f"FICHIER : (masqué)\n{meta}{mask_patient_names(content)}", encoding="utf-8")
+    out = full
+    print(f"Texte complet (NOMS, ne pas partager) : {out}")
+    print(f"Version aux noms masqués (relire avant de partager) : {shareable}")
     print(f"Raisons du choix : {reasons}")
-    print("Ouvre ce fichier ET le document Word correspondant (nom en 1re ligne) et compare.")
+    print("Compare le fichier complet au document Word (nom en 1re ligne).")
+    print("Si tu partages un texte, utilise la version masquée.")
 
 
 if __name__ == "__main__":
