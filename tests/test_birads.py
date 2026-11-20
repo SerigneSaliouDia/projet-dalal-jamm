@@ -13,6 +13,9 @@ LATERALISED = [
     ("examen mammographique classe acr 3 droit ; acr1 gauche.", "3", "1"),
     ("examen classe acr 4a a gauche et acr 1 a droite.", "1", "4A"),
     ("masse du sein droit classee acr 4. examen classe acr 2 a gauche.", "4", "2"),
+    # formulations rencontrées dans les vrais rapports : fautes de frappe, côté sans « à », ordre inversé
+    ("examen mammographique class acr 1 gauche et acr 3 droit (probable adeno fibrome).", "3", "1"),
+    ("examen mammographique classe acr 2 a droit et acr 1 a gauche.", "2", "1"),
 ]
 
 
